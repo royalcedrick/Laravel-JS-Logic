@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers;
 
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
-Route::post('/login', [\App\Http\Controllers\IndexController::class, 'login'])->name('login');
+Route::get('/',         [Controllers\IndexController::class, 'index']);
+Route::get('/user',     [Controllers\IndexController::class, 'userList']);
+Route::post('/login',   [Controllers\IndexController::class, 'login'])->name('login');

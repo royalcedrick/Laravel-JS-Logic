@@ -10,6 +10,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
+@font-face {
+    font-family: 'Kozuka Gothic Pr6N R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kozuka Gothic Pr6N R'), url('KozGoPr6NRegular.woff') format('woff');
+}
+
 /***
 
 ====================================================================
@@ -211,6 +218,7 @@ body {
     width: 14px;
     height: 14px;
     display: inline-block;
+    transform: rotate(270deg);
 }
 
 .news-container .detail-link {
@@ -221,14 +229,10 @@ body {
 .news-container .detail-link span.go-button-icon {
     position: relative;
     font-size: 11px;
-    font-family: "Kozuka Gothic Pr6N";
     color: rgb(255, 255, 255);
     text-align: left;
-    top: -2.5px;
+    top: -3.5px;
     left: 1px;
-    -moz-transform: matrix( 0,-0.62088070653125,0.62088070653125,0,0,0);
-    -webkit-transform: matrix( 0,-0.62088070653125,0.62088070653125,0,0,0);
-    -ms-transform: matrix( 0,-0.62088070653125,0.62088070653125,0,0,0);
 
 }
 
@@ -238,4 +242,35 @@ body {
     text-decoration: underline;
     line-height: 2;
     text-align: left;
+    font-family: 'Kozuka Gothic Pr6N R', serif;
+}
+
+/***
+
+====================================================================
+	Footer Section
+====================================================================
+
+ ***/
+
+footer  {
+    height: 60px;
+    margin-top: 90px;
+}
+
+
+.footer-container {
+    height: 100%;
+    width: 100%;
+    text-align:center;
+    background-color: rgb(121, 199, 232);
+}
+
+.footer-container span {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 4.833;
+    text-align: center;
+    letter-spacing: 0.6px;
 }

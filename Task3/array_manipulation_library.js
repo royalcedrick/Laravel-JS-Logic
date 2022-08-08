@@ -47,10 +47,32 @@ const $ = {
       }
       return collection;
   },
-  reduce: function () {},
-  head: function () {},
-  tail: function () {},
-  join: function () {}
+  reduce: function (collection, fnCallback, initialValue) {
+      if (collection.length === 0 && typeof initialValue === 'undefined') {
+          return [];
+      }
+      let total = (typeof initialValue === 'undefined') ? 0 : initialValue;
+      for (let index = 0; index < collection.length; index++) {
+          total = fnCallback(collection[index], total);
+      }
+      return total;
+  },
+  head: function (collection) {
+      return (collection.length > 0) ? collection[0] : undefined;
+  },
+  tail: function (collection) {
+      return (collection.length > 0) ? collection[collection.length - 1] : undefined;
+  },
+  join: function (collection, connector) {
+      let concat = '';
+      for (let index = 0; index < collection.length; index++) {
+          concat += collection[index];
+          if ((index + 1) < collection.length) {
+              concat += connector;
+          }
+      }
+      return concat;
+  }
 };
 
 // *****************************************
@@ -103,40 +125,40 @@ const $ = {
   console.log(
     ($.reduce([1, 2, 3], function (acc, num) { return acc + num }, 4) === 10)
   );
-  //
-  // console.log('Running _.head...');
-  //
-  // // Getting top of array
-  // console.log(
-  //   ($.head([1, 2, 3]) === 1)
-  // );
-  //
-  // // Getting top of empty array
-  // console.log(
-  //   ($.head([]) === undefined)
-  // );
-  //
-  // console.log('Running _.tail...');
-  //
-  // // Getting tail of array
-  // console.log(
-  //   ($.tail([1, 2, 3]) === 3)
-  // );
-  //
-  // // Getting tail of empty array
-  // console.log(
-  //   ($.tail([]) === undefined)
-  // );
-  //
-  // console.log('Running _.join...');
-  //
-  // // Joining array
-  // console.log(
-  //   ($.join(['to','be', 1], '-') === 'to-be-1')
-  // );
-  //
-  // // Joining empty array
-  // console.log(
-  //   ($.join([], '-') === '')
-  // );
+
+  console.log('Running _.head...');
+
+  // Getting top of array
+  console.log(
+    ($.head([1, 2, 3]) === 1)
+  );
+
+  // Getting top of empty array
+  console.log(
+    ($.head([]) === undefined)
+  );
+
+  console.log('Running _.tail...');
+
+  // Getting tail of array
+  console.log(
+    ($.tail([1, 2, 3]) === 3)
+  );
+
+  // Getting tail of empty array
+  console.log(
+    ($.tail([]) === undefined)
+  );
+
+  console.log('Running _.join...');
+
+  // Joining array
+  console.log(
+    ($.join(['to','be', 1], '-') === 'to-be-1')
+  );
+
+  // Joining empty array
+  console.log(
+    ($.join([], '-') === '')
+  );
 })();

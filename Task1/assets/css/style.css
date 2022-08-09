@@ -1,0 +1,388 @@
+/************ TABLE OF CONTENTS ***************
+1. Navbar
+2. Banner
+3. Sample Section
+4. News Section
+5. Footer
+6. Responsiveness
+
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Kozuka Gothic Pr6N R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kozuka Gothic Pr6N R'), url('../fonts/KozGoPr6NRegular.woff') format('woff');
+}
+
+/***
+
+====================================================================
+	Navbar
+====================================================================
+
+ ***/
+
+#navigation-container {
+    width: 960px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.navigation-bar {
+    position: relative;
+    height: 106px;
+    width: 100%;
+    text-align:center;
+    background: -moz-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -webkit-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -ms-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    z-index: 99999;
+}
+.navigation-bar .navigation-brand {
+    color: white;
+    line-height: 106px;
+    font-size: 36px;
+    float: left;
+    font-weight: bold;
+}
+.navigation-bar .navigation-brand span {
+    text-shadow: 0 0 1px #fff, 0 0 1px #c6c6c6;
+    font-size: 36px;
+    font-weight: bold;
+}
+.navigation-bar .navigation-brand span.hamburger {
+    display: none;
+}
+.navigation-bar .navigation-brand span div {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+}
+.navigation-bar ul {
+    display:inline-block;
+    float: right;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align:top;
+    line-height: 106px;
+}
+.navigation-bar li {
+    list-style-type: none;
+    padding: 0;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+}
+.navigation-bar li a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 5px 15px;
+    text-align: center;
+}
+.navigation-bar li a:hover {
+    border-radius: 3px;
+    background-color: rgb(65, 150, 180);
+    width: 62px;
+    height: 21px;
+}
+
+/***
+
+====================================================================
+	Banner
+====================================================================
+
+ ***/
+.banner-wrapper {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.banner-wrapper .banner-container {
+    width: 960px;
+    margin: 0 auto;
+    background-image: url('../images/keyvisual.png');
+    height: 400px;
+
+}
+
+
+/***
+
+====================================================================
+	Sample Section
+====================================================================
+
+ ***/
+.section-wrapper {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.section-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section-container .section-title {
+    border-bottom: 3px solid #79c7e8;
+    height: 50px;
+}
+
+
+.section-container .section-title:before {
+    position: absolute;
+    top: 16px;
+    width: 6px;
+    height: 25px;
+    content: '';
+    background: -moz-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -webkit-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -ms-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+}
+
+.section-container .section-title span {
+    margin-left: 15px;
+    font-size: 28px;
+    font-family: Arial, serif;
+    color: #333333;
+    line-height: 2.071;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(173, 173, 173, 0.75);
+}
+
+.section-container .section-description {
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-family: Arial, serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.4;
+    text-align: left;
+}
+
+/***
+
+====================================================================
+	News Section
+====================================================================
+
+ ***/
+
+.news-wrapper {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.news-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.news-container .news-title {
+    border-bottom: 3px solid #79c7e8;
+    height: 50px;
+}
+
+.news-container .news-title:before {
+    position: absolute;
+    top: 16px;
+    width: 6px;
+    height: 25px;
+    content: '';
+    background: -moz-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -webkit-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    background: -ms-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+}
+
+.news-container .news-title span {
+    margin-left: 15px;
+    font-size: 28px;
+    font-family: Arial, serif;
+    color: #333333;
+    line-height: 2.071;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(173, 173, 173, 0.75);
+    margin-bottom: 30px;
+}
+
+.news-container .news-description ul {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+.news-container .news-description li {
+    margin-bottom: 20px;
+}
+.news-container .news-description .news-list-title {
+    margin-left: 25px;
+}
+
+.news-container .detail-link .go-button {
+    border-radius: 2px;
+    background-color: rgb(121, 199, 232);
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    transform: rotate(270deg);
+}
+
+.news-container .detail-link {
+    float: right;
+    color: rgb(0, 102, 153);
+}
+
+.news-container .detail-link span.go-button-icon {
+    position: relative;
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    top: -3.5px;
+    left: 1px;
+
+}
+
+.news-container .detail-link a, .news-container .detail-link a:visited, .news-container .detail-link a:hover, .news-container .detail-link a:active {
+    color: rgb(0, 102, 153);
+    font-size: 16px;
+    text-decoration: underline;
+    line-height: 2;
+    text-align: left;
+    font-family: 'Kozuka Gothic Pr6N R', serif;
+}
+
+/***
+
+====================================================================
+	Footer Section
+====================================================================
+
+ ***/
+
+footer  {
+    height: 60px;
+    margin-top: 90px;
+}
+
+
+.footer-container {
+    width: 100%;
+    text-align:center;
+    background-color: rgb(121, 199, 232);
+}
+
+.footer-container span {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 4.833;
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+
+
+/***
+
+====================================================================
+	Responsiveness
+====================================================================
+
+ ***/
+
+
+@media (min-width: 768px) {
+    .navbar-toggle-off {
+        display: block;
+    }
+}
+
+@media (max-width: 960px) {
+    .navigation-bar .navigation-brand {
+        margin-left: 15px;
+    }
+    .section-wrapper,
+    .news-wrapper {
+        width: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #navigation-container,.banner-wrapper .banner-container,.banner-wrapper .banner-container img,.section-container,.news-container {
+        width: 100%;
+    }
+    
+    span.news-list-date {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .news-container .news-description .news-list-title {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .navigation-bar .navigation-brand {
+        float: none;
+        text-align: left;
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    .navigation-bar .navigation-brand span.hamburger {
+        display: block;
+        position: absolute;
+        top: 32px;
+        right: 15px;
+    }
+    .navigation-bar #navigation-container ul.navbar-toggle-off {
+        display: none!important;
+    }
+    .navigation-bar ul {
+        float: none !important;
+        margin: 0 !important;
+        width: 100% !important;
+        border-top: none;
+    }
+    .navigation-bar ul li {
+        margin: 0 !important;
+        float: none !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+    .navigation-bar ul li:first-child a {
+        border-top: 1px solid white;
+    }
+    .navigation-bar ul li a {
+        display: block;
+        padding: 12px 20px !important;
+        line-height: 22px;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 15px;
+        border-bottom: 0.5px solid white;
+        text-align: left;
+        background: -moz-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+        background: -webkit-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+        background: -ms-linear-gradient( 90deg, rgb(105,188,224) 0%, rgb(113,194,228) 15%, rgb(121,199,232) 53%);
+    }
+    .navigation-bar ul li a:hover {
+        background: rgb(65, 150, 180) none;
+        width: 100%;
+    }
+    .footer-container span {
+        display: inline-block;
+    }
+}
